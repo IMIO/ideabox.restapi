@@ -11,6 +11,7 @@
   <include package="imio.restapi" />
 
   <include package=".browser" />
+  <include package=".form" />
 
   <include file="permissions.zcml" />
   <include file="upgrades.zcml" />
