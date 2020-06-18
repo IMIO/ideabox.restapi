@@ -20,6 +20,10 @@
     factory=".pstaction.PSTActionImporter"
     />
 
+  <adapter
+    factory=".authentication.IdeaboxAuthentication"
+    />
+
   <utility
     component=".vocabularies.PSTActionVocabulary"
     name="ideabox.restapi.vocabularies:pstaction"
