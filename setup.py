@@ -45,6 +45,8 @@ setup(
         "Products.GenericSetup>=1.8.2",
         "setuptools",
         "z3c.jbot",
+        "imio.ws.register",
+        "imio.restapi",
     ],
     extras_require={
         "test": [
