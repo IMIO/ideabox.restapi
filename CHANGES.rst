@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a3 (unreleased)
+1.0a3 (2020-06-23)
 ------------------
 
 - Improve filtering of already imported content for remote pst action vocabulary
