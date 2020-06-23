@@ -14,6 +14,9 @@ class PSTActionVocabularyFactory(base.RestSearchVocabularyFactory):
 
     def _existing_link(self, id, obj):
         """ Verify if the given id is defined in a link on the object """
+        link = get_links(obj)
+        if not link:  # This can happen with content created manually
+            return False
         for link in get_links(obj):
             if link.back_link is True:
                 if link.path == id:
