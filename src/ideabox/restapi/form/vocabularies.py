@@ -31,7 +31,7 @@ class PSTActionVocabularyFactory(base.RestSearchVocabularyFactory):
 
     def _filter(self, value):
         for child in self._children:
-            if self._existing_link(value["@id"], child):
+            if self._existing_link(value, child):
                 return False
         return True
 

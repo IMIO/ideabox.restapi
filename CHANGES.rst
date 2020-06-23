@@ -5,7 +5,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve filtering of already imported content for remote pst action vocabulary
+  [mpeeters]
 
 
 1.0a2 (2020-06-23)
