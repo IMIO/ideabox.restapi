@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a4 (unreleased)
+1.0a4 (2020-06-24)
 ------------------
 
 - Improve performance for filtering of pst action vocabulary
