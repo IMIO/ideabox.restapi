@@ -12,16 +12,16 @@ class PSTActionVocabularyFactory(base.RestSearchVocabularyFactory):
     def parameters(self):
         return "portal_type=pstaction&b_size=999"
 
-    def _existing_link(self, id, obj):
-        """ Verify if the given id is defined in a link on the object """
+    def _existing_link(self, obj):
+        """ Return the link paths for the given content """
         link = get_links(obj)
+        result = []
         if not link:  # This can happen with content created manually
-            return False
+            return result
         for link in get_links(obj):
             if link.back_link is True:
-                if link.path == id:
-                    return True
-        return False
+                result.append(link.path)
+        return result
 
     @property
     def _children(self):
@@ -29,11 +29,16 @@ class PSTActionVocabularyFactory(base.RestSearchVocabularyFactory):
             self._context_children = [self.context[k] for k in self.context.keys()]
         return self._context_children
 
+    @property
+    def _existing_links(self):
+        if not hasattr(self, "_context_links"):
+            self._context_links = []
+            for child in self._children:
+                self._context_links.extend(self._existing_link(child))
+        return self._context_links
+
     def _filter(self, value):
-        for child in self._children:
-            if self._existing_link(value, child):
-                return False
-        return True
+        return value not in self._existing_links
 
 
 PSTActionVocabulary = PSTActionVocabularyFactory()

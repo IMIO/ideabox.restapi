@@ -5,7 +5,8 @@ Changelog
 1.0a4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve performance for filtering of pst action vocabulary
+  [mpeeters]
 
 
 1.0a3 (2020-06-23)
