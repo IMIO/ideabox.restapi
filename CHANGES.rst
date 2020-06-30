@@ -5,6 +5,9 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
+- Improving UI for pst action import form by using a multi select2 widget
+  [mpeeters]
+
 - Fix caching for pst action vocabulary
   [mpeeters]
 

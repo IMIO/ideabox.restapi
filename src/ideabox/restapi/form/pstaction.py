@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 
+from ideabox.policy.content.campaign import ICampaign
+from ideabox.restapi import _
 from imio.restapi.form.form import ImportForm
 from imio.restapi.form.importer import BaseContentImporter
-from ideabox.policy.content.campaign import ICampaign
+from plone.app.z3cform.widget import SelectFieldWidget
 from plone.z3cform.layout import FormWrapper
-from zope.interface import Interface
-from zope import schema
 from z3c.form.field import Fields
-from ideabox.restapi import _
+from zope import schema
 from zope.component import adapter
+from zope.interface import Interface
 
 
 class IPSTActionImportSchema(Interface):
@@ -27,6 +28,10 @@ class IPSTActionImportSchema(Interface):
 class PSTActionImportForm(ImportForm):
     _application_id = "PST"
     fields = Fields(IPSTActionImportSchema)
+
+    def update(self):
+        self.fields["import_list"].widgetFactory = SelectFieldWidget
+        super(PSTActionImportForm, self).update()
 
     def _get_data(self, data):
         return data["import_list"]
