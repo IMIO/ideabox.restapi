@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0a5 (unreleased)
+1.0b1 (2020-06-30)
 ------------------
 
 - Improving UI for pst action import form by using a multi select2 widget
