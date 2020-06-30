@@ -2,6 +2,7 @@
 
 from imio.restapi.vocabularies import base
 from imio.restapi.form.link import get_links
+from plone.memoize import view
 
 
 class PSTActionVocabularyFactory(base.RestSearchVocabularyFactory):
@@ -24,18 +25,17 @@ class PSTActionVocabularyFactory(base.RestSearchVocabularyFactory):
         return result
 
     @property
+    @view.memoize
     def _children(self):
-        if not hasattr(self, "_context_children"):
-            self._context_children = [self.context[k] for k in self.context.keys()]
-        return self._context_children
+        return [self.context[k] for k in self.context.keys()]
 
     @property
+    @view.memoize
     def _existing_links(self):
-        if not hasattr(self, "_context_links"):
-            self._context_links = []
-            for child in self._children:
-                self._context_links.extend(self._existing_link(child))
-        return self._context_links
+        context_links = []
+        for child in self._children:
+            context_links.extend(self._existing_link(child))
+        return context_links
 
     def _filter(self, value):
         return value not in self._existing_links

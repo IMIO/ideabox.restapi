@@ -5,7 +5,8 @@ Changelog
 1.0a5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix caching for pst action vocabulary
+  [mpeeters]
 
 
 1.0a4 (2020-06-24)
