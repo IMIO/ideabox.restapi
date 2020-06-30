@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="ideabox.restapi",
-    version="1.0b1",
+    version="1.0b2.dev0",
     description="Rest service for ideabox",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
