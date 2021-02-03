@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b2 (unreleased)
+1.0b2 (2021-02-03)
 ------------------
 
 - Add import of pst subactions for action progress
