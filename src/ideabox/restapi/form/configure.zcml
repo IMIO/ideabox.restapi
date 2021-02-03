@@ -12,21 +12,45 @@
     class=".pstaction.PSTActionImportFormView"
     />
 
-  <adapter
-    factory=".action.PSTActionImportAction"
-    />
-
-  <adapter
-    factory=".pstaction.PSTActionImporter"
+  <browser:page
+    for="*"
+    name="pstaction-progress-import-form"
+    permission="zope2.View"
+    class=".pstactionprogress.PSTActionProgressImportFormView"
     />
 
   <adapter
     factory=".authentication.IdeaboxAuthentication"
     />
 
+  <!-- actions adapters -->
+  <adapter
+    factory=".action.PSTActionImportAction"
+    />
+
+  <adapter
+    factory=".action.PSTActionImportProgress"
+    />
+
+  <!-- importer adapters -->
+  <adapter
+    factory=".pstaction.PSTActionImporter"
+    />
+
+  <adapter
+    factory=".pstactionprogress.PSTActionProgressImporter"
+    />
+
+  <!-- vocabularies -->
   <utility
     component=".vocabularies.PSTActionVocabulary"
     name="ideabox.restapi.vocabularies:pstaction"
+    provides="zope.schema.interfaces.IVocabularyFactory"
+    />
+
+  <utility
+    component=".vocabularies.PSTActionProgressVocabulary"
+    name="ideabox.restapi.vocabularies:pstactionprogress"
     provides="zope.schema.interfaces.IVocabularyFactory"
     />
 

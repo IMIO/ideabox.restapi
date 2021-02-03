@@ -5,7 +5,8 @@ Changelog
 1.0b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add import of pst subactions for action progress
+  [mpeeters]
 
 
 1.0b1 (2020-06-30)
