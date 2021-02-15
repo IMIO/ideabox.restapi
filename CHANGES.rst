@@ -5,7 +5,8 @@ Changelog
 1.0b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update french translations
+  [mpeeters]
 
 
 1.0b2 (2021-02-03)
