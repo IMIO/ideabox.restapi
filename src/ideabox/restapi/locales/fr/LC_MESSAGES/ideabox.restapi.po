@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-06-22 10:33+0000\n"
+"POT-Creation-Date: 2021-02-15 10:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,19 +14,31 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ideabox.restapi\n"
 
-#: ../form/action.py:12
+#: ../form/action.py:13
 msgid "Import PST Actions"
 msgstr "Importer des actions du PST"
+
+#: ../form/action.py:21
+msgid "Import PST Progresses"
+msgstr ""
 
 #: ../configure.zcml:26
 msgid "Installs the ideabox.restapi add-on."
 msgstr "Installer le produit ideabox.restapi"
 
-#: ../form/pstaction.py:17
+#: ../form/pstactionprogress.py:18
+msgid "List of PST Actions progresses that you want to import"
+msgstr ""
+
+#: ../form/pstaction.py:18
 msgid "List of PST Actions that you want to import"
 msgstr "Liste des actions du PST que vous voulez importer"
 
-#: ../form/pstaction.py:18
+#: ../form/pstactionprogress.py:19
+msgid "This list contains only PST Actions progresses that was not already imported"
+msgstr ""
+
+#: ../form/pstaction.py:19
 msgid "This list contains only PST Actions that was not already imported"
 msgstr "Cette liste contient uniquement les actions du PST qui n'ont pas encore été importées"
 
